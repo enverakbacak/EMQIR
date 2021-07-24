@@ -44,7 +44,7 @@ if (~exist('opts','var'))
    opts = [];
 end
 
-p = 1000;
+p = 50;
 if isfield(opts,'p')
     p = opts.p;
 end

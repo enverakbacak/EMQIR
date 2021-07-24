@@ -3,16 +3,16 @@ close all;
 clear all;
 clc;
 
-load('/home/ubuntu/Desktop/Thesis_Follow_Up_2/dmqRetrieval/streetsDataset/hashCodes/hashCodes_32.mat');
+load('Barcelona/hashCodes/hashCodes_32.mat');
 data = hashCodes_32;
-load('/home/ubuntu/Desktop/Thesis_Follow_Up_2/dmqRetrieval/streetsDataset/hashCodes/targets.mat');
+load('Barcelona/hashCodes/targets.mat');
 targets = targets;
-load('/home/ubuntu/Desktop/Thesis_Follow_Up_2/dmqRetrieval/streetsDataset/hashCodes/filenames.mat');
+load('Barcelona/hashCodes/filenames.mat');
 filenames = filenames;
 
 N = length(filenames);
 
-queryIndex = xlsread('/home/ubuntu/Desktop/Thesis_Follow_Up_2/dmqRetrieval/streetsDataset/streets_2d.xls');  % Reads randomly choosen query pairs from excell file
+queryIndex = xlsread('Barcelona/qGroups_2d.xls');  % Reads randomly choosen query pairs from excell file
 queryIndex = transpose( queryIndex ); 
 queryIndex1 = queryIndex(1,:); % First element of Query Pair
 queryIndex2 = queryIndex(2,:); % Second element of Qury Pair
